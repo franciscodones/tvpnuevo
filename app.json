@@ -1,0 +1,140 @@
+{
+   "name": "tvp",
+   "namespace": "tvp",
+   "version": "1.0.0.0",
+   "framework": "ext",
+   "toolkit": "classic",
+   "theme": "theme-triton-07bc4926-c6f3-494a-8ac7-eaeacf9e308f",
+   "requires": [
+      "font-awesome",
+      "pyansa-ux",
+      "pyansa-lang"
+   ],
+   "indexHtmlPath": "index.html",
+   "classpath": [
+      "app"
+   ],
+   "overrides": [
+      "overrides"
+   ],
+   "fashion": {
+      "missingParameters": "error",
+      "inliner": {
+         "enable": false
+      }
+   },
+   "sass": {
+      "namespace": "tvp",
+      "generated": {
+         "var": "sass/save.scss",
+         "src": "sass/save"
+      },
+      "etc": [
+         "sass/etc/all.scss"
+      ],
+      "var": [
+         "sass/var/all.scss",
+         "sass/var"
+      ],
+      "src": [
+         "sass/src/all.scss",
+         "sass/src"
+      ]
+   },
+   "js": [
+      {
+         "path": "${framework.dir}/build/ext-all-rtl-debug.js"
+      },
+      {
+         "path": "app.js",
+         "bundle": true
+      }
+   ],
+   "css": [
+      {
+         "path": "${build.out.css.path}",
+         "bundle": true,
+         "exclude": [
+            "fashion"
+         ]
+      }
+   ],
+   "loader": {
+      "cache": false,
+      "cacheParam": "_dc"
+   },
+   "production": {
+      "output": {
+         "appCache": {
+            "enable": true,
+            "path": "cache.appcache"
+         }
+      },
+      "loader": {
+         "cache": "${build.timestamp}"
+      },
+      "cache": {
+         "enable": true
+      },
+      "compressor": {
+         "type": "yui"
+      }
+   },
+   "testing": {},
+   "development": {
+      "watch": {
+         "delay": 250
+      }
+   },
+   "bootstrap": {
+      "base": "${app.dir}",
+      "microloader": "bootstrap.js",
+      "css": "bootstrap.css"
+   },
+   "output": {
+      "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+      "appCache": {
+         "enable": false
+      }
+   },
+   "cache": {
+      "enable": false,
+      "deltas": true
+   },
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      {
+         "path": "resources",
+         "output": "shared"
+      }
+   ],
+   "archivePath": "archive",
+   "slicer": {
+      "js": [
+         {
+            "path": "sass/example/custom.js",
+            "isWidgetManifest": true
+         }
+      ],
+      "output": {
+         "appCache": {
+            "enable": false
+         }
+      },
+      "cache": {
+         "enable": false
+      }
+   },
+   "ignore": [
+      "(^|/)CVS(/?$|/.*?$)"
+   ],
+   "id": "a8f32cd5-630f-448b-9428-5d29cef916ad"
+}
